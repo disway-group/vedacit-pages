@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedacit | Inscrição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./_assets/_css/globals.css">
+    <link rel="stylesheet" href="./_assets/_css/style.css">
+    <link rel="stylesheet" href="./_assets/_css/responsive.css">
+</head>
+
+<body>
+
+    <div class="sticky-header-wrapper">
+
+        <div class="top-bar">
+            <div class="container">
+                <span class="top-bar-text">Vedacit Pro</span>
+
+                <div class="accessibility-options">
+                    <span>Contraste</span>
+                    <a href="#" aria-label="Mudar Contraste"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                    <a href="#" aria-label="Modo Claro"><i class="fa-solid fa-sun"></i></a>
+                    <a href="#" aria-label="Modo Escuro"><i class="fa-solid fa-moon"></i></a>
+
+                    <span class="divider"></span> <span>Texto</span>
+                    <a href="#" aria-label="Aumentar Fonte" class="text-icon">A+</a>
+                    <a href="#" aria-label="Diminuir Fonte" class="text-icon">A-</a>
+
+                    <span class="divider"></span> <span>Libras</span>
+                    <a href="#" aria-label="Ativar Libras"><i class="fa-solid fa-hands-asl-interpreting"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <header class="site-header">
+
+            <div class="logo-wrapper">
+                <a href="/">
+                    <img src="./_assets/_images/logo-vedacit.svg" alt="Logo da Vedacit">
+                </a>
+            </div>
+
+            <div class="nav-wrapper">
+
+                <input type="checkbox" id="menu-toggle" class="mobile-menu-checkbox">
+
+                <label for="menu-toggle" class="mobile-nav-toggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars icon-open"></i> <i class="fa-solid fa-times icon-close"></i> </label>
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#">Produtos e Soluções</a></li>
+                        <li><a href="#">Lojistas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Institucional</a></li>
+                        <li><a href="#">Sistema B</a></li>
+                        <li><a href="#">Vedacit Pro</a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="btn-header">Onde Encontrar</a>
+
+                <div class="header-search">
+                    <a href="#" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+
+        </header>
+        <div class="progress-bar"></div>
+
+    </div>
+    <main class="hero-section">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+                <span class="subtitle">ESPAÇO PARA SUBTÍTULO</span>
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam orci ipsum, facilisis non augue ac,
+                    condimentum pulvinar lectus.</p>
+                <a href="#" class="btn-cta-main">Label CTA</a>
+            </div>
+
+            <div class="hero-form-wrapper">
+                <h2>Faça sua inscrição</h2>
+                <form action="#" method="POST">
+
+                    <div class="form-group">
+                        <label for="palestrante">Nome do palestrante</label>
+                        <input type="text" id="palestrante" name="palestrante"
+                            placeholder="Insira o nome do palestrante">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome">Nome e sobrenome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome e sobrenome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profissao">Profissão</label>
+                        <input type="text" id="profissao" name="profissao" placeholder="Informe sua profissão">
+                    </div>
+
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado">
+                                <option value="">Selecione o estado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <select id="cidade" name="cidade">
+                                <option value="">Selecione a cidade</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Informe seu telefone">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Informe seu e-mail">
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="auth-contato" name="auth-contato">
+                        <label for="auth-contato">Autorizo o uso dos dados informados neste formulário para manter
+                            contato com a Vedacit, de acordo com a sua Política de Privacidade.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="auth-news" name="auth-news">
+                        <label for="auth-news">Autorizo a Vedacit a me atualizar sobre suas notícias, eventos e
+                            ofertas.</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Inscrever</button>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">História</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Instituto Vedacit</a></li>
+                    <li><a href="#">Sala de Imprensa</a></li>
+                    <li><a href="#">Nossos Prêmios</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                    <li><a href="#">Código de conduta de Fornecedores</a></li>
+                    <li><a href="#">Diretrizes da marca</a></li>
+                    <li><a href="#">Acessibilidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Produtos e Soluções</h3>
+                <ul>
+                    <li><a href="#">Categorias de produtos</a></li>
+                    <li><a href="#">Vedacit Pro</a></li>
+                </ul>
+
+                <h3 class="footer-blog-title">Blog</h3>
+                <ul>
+                    <li><a href="#">Mundo Vedacit</a></li>
+                    <li><a href="#">Vedacit Explica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#">Glossário</a></li>
+                    <li><a href="#">Vedacit Explica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Fale Conosco</h3>
+                <p class="contact-label">SAC</p>
+                <p class="contact-info"><a href="mailto:sac@vedacit.com.br">&#9993; sac@vedacit.com.br</a></p>
+                <p class="contact-info">0800 833 2248</p>
+
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

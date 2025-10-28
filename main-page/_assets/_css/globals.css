@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    font-family: "Inter", sans-serif;
+}
+
+/* --- CONFIGURAÇÕES GLOBAIS E VARIÁVEIS --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --header-bg-gray: #e0e0e0;
+    --topbar-bg-dark: #222222;
+    --topbar-text-color: #f0f0f0;
+    --primary-color: #ffb919;
+    --dark-color: #080808;
+    --light-color: #ffffff;
+    --text-color: #555555;
+    --border-color: #e0e0e0;
+    --font-heading: "Outfit", sans-serif;
+    --font-body: "Inter", sans-serif;
+}

@@ -1,0 +1,130 @@
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE (PURE CSS) --- */
+
+@media (max-width: 768px) {
+
+    /* --- AJUSTES DO HEADER --- */
+    /* ... (as regras do .top-bar, .site-header, .logo-wrapper, etc. continuam iguais) ... */
+    
+    .sticky-header-wrapper {
+        box-shadow: none;
+    }
+    .top-bar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .accessibility-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .site-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .logo-wrapper {
+        justify-content: center;
+        padding: 15px;
+    }
+    .nav-wrapper {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    /* Esconde os itens de navegação do desktop */
+    .nav-wrapper .btn-header,
+    .nav-wrapper .header-search {
+        display: none;
+    }
+    
+    /* Mostra o botão (label) hamburger */
+    .mobile-nav-toggle {
+        display: block; /* Mostra a label no mobile */
+    }
+
+    /* --- Estilo do Menu Mobile (Escondido por padrão) --- */
+    .main-nav {
+        display: none; /* Menu escondido por padrão */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--light-color);
+        padding: 60px 20px 20px 20px;
+        z-index: 1000;
+        min-height: 100vh;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .main-nav .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-nav .nav-links a {
+        font-size: 1.2rem;
+    }
+
+
+    /* --- A MÁGICA DO PURE CSS --- */
+
+    /* 1. Quando o checkbox é marcado, MOSTRA o menu */
+    .mobile-menu-checkbox:checked ~ .main-nav {
+        display: flex;
+    }
+
+    /* 2. Quando o checkbox é marcado, ajusta o botão (label) */
+    .mobile-menu-checkbox:checked ~ .mobile-nav-toggle {
+        position: fixed; /* Fixo para ficar visível sobre o menu */
+        top: 20px;
+        right: 20px;
+        color: var(--dark-color); /* Garante que o X seja escuro no fundo branco */
+    }
+
+    /* 3. Troca o ícone ☰ por X */
+    .mobile-menu-checkbox:checked ~ .mobile-nav-toggle .icon-open {
+        display: none; /* Esconde hamburger */
+    }
+    .mobile-menu-checkbox:checked ~ .mobile-nav-toggle .icon-close {
+        display: block; /* Mostra "X" */
+    }
+
+
+    /* --- AJUSTES DO HERO SECTION --- */
+    .hero-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .hero-content,
+    .hero-form-wrapper {
+        max-width: 100%;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-form-wrapper {
+        padding: 20px;
+    }
+    .form-group-inline {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* --- AJUSTES DO FOOTER --- */
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .footer-column h3::after {
+        display: none;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

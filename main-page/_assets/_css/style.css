@@ -1,0 +1,500 @@
+body {
+    font-family: var(--font-body);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    /* Adicionado para garantir que não haja padding */
+}
+
+.sticky-header-wrapper {
+    width: 100%;
+    position: fixed;
+    display: block;
+    top: 0px;
+}
+
+/* --- BARRA SUPERIOR --- */
+.top-bar {
+    background-color: var(--topbar-bg-dark);
+    color: var(--topbar-text-color);
+    padding: 8px 0;
+    font-size: 0.8rem;
+}
+
+.top-bar-text{
+    font-weight: bold;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accessibility-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* --- HEADER --- */
+
+.site-header {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background-color: var(--header-bg-gray);
+    position: fixed;
+}
+
+/* Bloco da Logo (Esquerda) */
+.logo-wrapper {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    flex-shrink: 0;
+}
+
+.logo-wrapper img {
+    height: 41.86px;
+}
+
+/* Bloco da Navegação (Direita) */
+.nav-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    gap: 30px;
+    background-image: url('../_images/concrete-wall-light.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-nav {
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-header {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.header-search {
+    color: var(--dark-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* --- FIM DA SEÇÃO DO HEADER --- */
+
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    padding: 80px 0;
+    background-image: url('../_images/fundovedacit.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 126px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    color: var(--dark-color);
+}
+
+.hero-content .subtitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 10px 0 20px 0;
+}
+
+.hero-content p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-cta-main {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+/* --- Formulário da Direita --- */
+.hero-form-wrapper {
+    flex: 1;
+    max-width: 500px;
+    background: var(--light-color);
+    padding: 35px;
+    border-radius: 20px;
+    /* Aumentei o arredondamento para 20px */
+
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    /* Sombra mais visível e "grossa" */
+
+}
+
+.hero-form-wrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    /* Aumentei para 2px de grossura */
+    border-radius: px;
+    /* Aumentei o arredondamento para 8px */
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+    /* Adiciona transição para o hover */
+}
+
+/* Opcional: Adicionar um efeito de foco/hover para melhorar a UX */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    /* Remove a borda padrão do navegador no foco */
+    border-color: var(--primary-color);
+    /* Borda amarela no foco */
+    box-shadow: 0 0 0 2px rgba(255, 185, 25, 0.2);
+    /* Sombra suave no foco */
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+
+.form-group-inline {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+}
+
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-check input[type="checkbox"] {
+    width: auto;
+    margin-top: 4px;
+}
+
+.form-check label {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+/* Botão de Envio */
+.btn-submit {
+    font-family: var(--font-heading);
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #555555;
+    padding: 40px 0 20px 0;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    font-family: var(--font-body);
+    background-image: url('../_images/pedra.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    font-weight: 500;
+}
+
+.site-footer a {
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: var(--primary-color);
+    /* Efeito hover (pode manter amarelo) */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column li a {
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    transition: color 0.3s ease;
+}
+
+/* --- Parte Inferior do Rodapé --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /* << MUDADO PARA UMA LINHA ESCURA */
+}
+
+.footer-pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    font-size: 0.9rem;
+}
+
+.pagination-arrow {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* << MUDADO PARA FUNDO ESCURO */
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.footer-restricted p {
+    color: var(--dark-color);
+    /* << MUDADO PARA PRETO */
+    font-size: 0.8rem;
+}
+
+/* --- Estilos para ícones de acessibilidade --- */
+
+.accessibility-options {
+    display: flex;
+    gap: 10px;
+    /* Reduzindo o 'gap' principal */
+    align-items: center;
+}
+
+.accessibility-options span {
+    font-weight: 600;
+    /* Deixa o texto "Contraste", "Texto" um pouco mais forte */
+    margin-right: 2px;
+}
+
+.accessibility-options a {
+    color: var(--topbar-text-color);
+    /* Cor branca, vinda da top-bar */
+    font-size: 1.1rem;
+    /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+}
+
+.accessibility-options a:hover {
+    color: var(--primary-color);
+    /* Efeito hover amarelo */
+}
+
+/* Estilo para A+ e A- */
+.accessibility-options .text-icon {
+    font-family: var(--font-heading);
+    /* Fonte Outfit */
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Divisor vertical */
+.accessibility-options .divider {
+    width: 1px;
+    height: 16px;
+    background-color: #555;
+    /* Cor cinza escura para o divisor */
+    margin: 0 5px;
+    /* Espaçamento em volta do divisor */
+}
+
+/* --- ESTILO DO MENU MÓVEL (DESKTOP) --- */
+.mobile-menu-checkbox {
+    display: none;
+    /* Esconde o checkbox real */
+}
+
+.mobile-nav-toggle {
+    display: none;
+    /* Escondido no desktop */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    z-index: 1001;
+}
+
+/* Gerencia qual ícone (☰ ou X) está visível */
+.mobile-nav-toggle .icon-close {
+    display: none;
+}
+
+.mobile-nav-toggle .icon-open {
+    display: block;
+}
+
+.footer-blog-title {
+    margin-top: 80px;
+}
