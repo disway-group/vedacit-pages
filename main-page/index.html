@@ -86,65 +86,143 @@
 
             <div class="hero-form-wrapper">
                 <h2>Faça sua inscrição</h2>
-                <form action="#" method="POST">
 
+                <form
+                    action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D010000008lNf"
+                    method="POST" class="web-to-lead-form">
+                    <input type="hidden" name="oid" value="00D010000008lNf">
+                    <input type="hidden" name="retURL" value="https://vedacit.com.br">
+
+                    <!-- Campo: Nome do Palestrante -->
                     <div class="form-group">
-                        <label for="palestrante">Nome do palestrante</label>
-                        <input type="text" id="palestrante" name="palestrante"
-                            placeholder="Insira o nome do palestrante">
+                        <label for="00NHZ000005tkwz" class="form-label">Nome do Palestrante</label>
+                        <input id="00NHZ000005tkwz" name="00NHZ000005tkwz" type="text" maxlength="255" size="20"
+                            class="form-input">
                     </div>
 
+                    <!-- Campo: Sobrenome -->
                     <div class="form-group">
-                        <label for="nome">Nome e sobrenome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome e sobrenome">
+                        <label for="last_name" class="form-label">Sobrenome</label>
+                        <input id="last_name" name="last_name" type="text" maxlength="80" size="20" class="form-input">
                     </div>
 
+                    <!-- Campo: Profissão -->
                     <div class="form-group">
-                        <label for="profissao">Profissão</label>
-                        <input type="text" id="profissao" name="profissao" placeholder="Informe sua profissão">
+                        <label for="00NHZ000005uk26" class="form-label">Profissão</label>
+                        <select id="00NHZ000005uk26" name="00NHZ000005uk26" title="Profissão">
+                            <option value="">--None--</option>
+                            <option value="Pedreiro / Mestre de Obras">Pedreiro / Mestre de Obras</option>
+                            <option value="Engenheiro">Engenheiro</option>
+                            <option value="Lojista">Lojista</option>
+                            <option value="Consumidor">Consumidor</option>
+                        </select><br>
                     </div>
 
-                    <div class="form-group-inline">
-                        <div class="form-group">
-                            <label for="estado">Estado</label>
-                            <select id="estado" name="estado">
-                                <option value="">Selecione o estado</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="cidade">Cidade</label>
-                            <select id="cidade" name="cidade">
-                                <option value="">Selecione a cidade</option>
-                            </select>
-                        </div>
+                    <!-- Campo: Estado -->
+                    <div class="form-group">
+                        <label for="00NHZ000005tl3R" class="form-label">Estado</label>
+                        <select id="00NHZ000005tl3R" name="00NHZ000005tl3R" title="Estado" class="form-select">
+                            <option value="">--Selecione--</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
                     </div>
 
-                    <div class="form-group-inline">
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="Informe seu telefone">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="Informe seu e-mail">
-                        </div>
+                    <!-- Campo: Cidade -->
+                    <div class="form-group">
+                        <label for="00NHZ000005tlOP" class="form-label">Cidade</label>
+                        <select id="00NHZ000005tlOP" name="00NHZ000005tlOP" title="Cidade" class="form-select">
+                            <option value="">--Selecione--</option>
+                            <option value="Aracaju">Aracaju</option>
+                            <option value="Belém">Belém</option>
+                            <option value="Belo Horizonte">Belo Horizonte</option>
+                            <option value="Boa Vista">Boa Vista</option>
+                            <option value="Brasília">Brasília</option>
+                            <option value="Campo Grande">Campo Grande</option>
+                            <option value="Cuiabá">Cuiabá</option>
+                            <option value="Curitiba">Curitiba</option>
+                            <option value="Florianópolis">Florianópolis</option>
+                            <option value="Fortaleza">Fortaleza</option>
+                            <option value="Goiânia">Goiânia</option>
+                            <option value="João Pessoa">João Pessoa</option>
+                            <option value="Macapá">Macapá</option>
+                            <option value="Maceió">Maceió</option>
+                            <option value="Manaus">Manaus</option>
+                            <option value="Natal">Natal</option>
+                            <option value="Palmas">Palmas</option>
+                            <option value="Porto Alegre">Porto Alegre</option>
+                            <option value="Porto Velho">Porto Velho</option>
+                            <option value="Recife">Recife</option>
+                            <option value="Rio Branco">Rio Branco</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Salvador">Salvador</option>
+                            <option value="São Luís">São Luís</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Teresina">Teresina</option>
+                            <option value="Vitória">Vitória</option>
+                        </select>
                     </div>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="auth-contato" name="auth-contato">
-                        <label for="auth-contato">Autorizo o uso dos dados informados neste formulário para manter
-                            contato com a Vedacit, de acordo com a sua Política de Privacidade.</label>
+                    <!-- Campo: Telefone -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input id="phone" name="phone" type="text" maxlength="40" size="20" class="form-input">
                     </div>
 
-                    <div class="form-check">
-                        <input type="checkbox" id="auth-news" name="auth-news">
-                        <label for="auth-news">Autorizo a Vedacit a me atualizar sobre suas notícias, eventos e
-                            ofertas.</label>
+                    <!-- Campo: Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="email" maxlength="80" size="20" class="form-input">
                     </div>
 
-                    <button type="submit" class="btn-submit">Inscrever</button>
+                    <!-- Checkboxes -->
+                    <div class="form-group form-checkbox">
+                        <label class="form-checkbox-label">
+                            <input id="00NHZ000005tlbJ" name="00NHZ000005tlbJ" type="checkbox" value="1"
+                                class="form-checkbox-input">
+                            Autoriza uso de Dados?
+                        </label>
+                    </div>
 
+                    <div class="form-group form-checkbox">
+                        <label class="form-checkbox-label">
+                            <input id="00NHZ000005tfR8" name="00NHZ000005tfR8" type="checkbox" value="1"
+                                class="form-checkbox-input">
+                            Autoriza Ofertas
+                        </label>
+                    </div>
+
+                    <!-- Botão -->
+                    <div class="form-group form-submit">
+                        <input type="submit" name="submit" value="Enviar" class="form-button">
+                    </div>
                 </form>
+
             </div>
 
         </div>
