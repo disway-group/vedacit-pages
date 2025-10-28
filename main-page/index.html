@@ -82,6 +82,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam orci ipsum, facilisis non augue ac,
                     condimentum pulvinar lectus.</p>
                 <a href="#" class="btn-cta-main">Label CTA</a>
+                <img id="profImage" src="./_assets/_images/logista.png" alt="Profissão" width="200">
+
             </div>
 
             <div class="hero-form-wrapper">
@@ -109,7 +111,7 @@
                     <!-- Campo: Profissão -->
                     <div class="form-group">
                         <label for="00NHZ000005uk26" class="form-label">Profissão</label>
-                        <select id="00NHZ000005uk26" name="00NHZ000005uk26" title="Profissão">
+                        <select id="00NHZ000005uk26" name="00NHZ000005uk26" title="Profissão" onchange="updateProfImage()">
                             <option value="">--None--</option>
                             <option value="Pedreiro / Mestre de Obras">Pedreiro / Mestre de Obras</option>
                             <option value="Engenheiro">Engenheiro</option>
@@ -287,7 +289,7 @@
         </div>
 
     </footer>
-
+    <script src="./_assets/_js/script.js"></script>
 </body>
 
 </html>
