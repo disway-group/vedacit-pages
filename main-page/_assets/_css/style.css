@@ -267,14 +267,17 @@ ul {
 
 .form-check {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
     margin-bottom: 15px;
 }
 
 .form-check input[type="checkbox"] {
-    width: auto;
+    width: 20px;
+    height: 20px;
     margin-top: 4px;
+    border: 1px solid var(--border-color);
 }
 
 .form-check label {
