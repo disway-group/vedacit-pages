@@ -25,6 +25,7 @@ ul {
     position: fixed;
     display: block;
     top: 0px;
+    z-index: 999;
 }
 
 /* --- BARRA SUPERIOR --- */
@@ -35,7 +36,7 @@ ul {
     font-size: 0.8rem;
 }
 
-.top-bar-text{
+.top-bar-text {
     font-weight: bold;
 }
 
@@ -158,6 +159,7 @@ ul {
     flex: 1;
     max-width: 50%;
     color: var(--dark-color);
+    position: relative;
 }
 
 .hero-content .subtitle {
@@ -223,7 +225,7 @@ ul {
     margin-bottom: 5px;
 }
 
-.form-group input,
+.form-group input:not(input[type="checkbox"]),
 .form-group select {
     width: 100%;
     padding: 12px;
@@ -497,4 +499,14 @@ ul {
 
 .footer-blog-title {
     margin-top: 80px;
+}
+
+.image-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image-container img{
+    transform: translate(100px, -100px);
 }
