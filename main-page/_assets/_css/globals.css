@@ -19,6 +19,7 @@ body {
     font-family: var(--font-body);
     color: var(--dark-color);
     line-height: 1.6;
+    background-color: #ffb919;
 }
 
 .container {
@@ -219,3 +220,116 @@ h6 {
 }
 
 /* --- FIM DA SEÇÃO DO HEADER --- */
+
+/* Container geral */
+.copy {
+    width: 100%;
+    border-top: 2px solid #f5a623;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* inner com largura controlada e posição relativa para o centro absoluto */
+.copy-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    min-height: 56px;
+    flex-wrap: wrap;
+}
+
+.copy-left{
+    width: 100%;
+    flex: 3;
+}
+
+/* logo à esquerda */
+.copy-left img {
+    height: 90px;
+    width: 228px;
+    /* ajustar conforme necessidade */
+    display: block;
+    margin-left: 20px;
+    /* afasta do canto como na imagem */
+}
+
+/* copyright sempre centralizado visualmente */
+.copy-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    /* ou #111 se quiser mais contraste */
+    pointer-events: none;
+    /* evita conflito se clicar sobre o centro */
+    white-space: nowrap;
+}
+
+/* Links à direita */
+.copy-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 20px;
+    /* afasta do canto direito como na imagem */
+}
+
+/* Estilo dos links */
+.copy-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+/* Ícone dentro de círculo parecido com a imagem */
+.copy-link i.fa-circle-plus,
+.copy-link i.fa-circle-plus:before {
+    /* caso a fonte tenha caracteres diferentes, aplicamos um fallback visual */
+}
+
+/* Melhor controlar a aparência do ícone desenhando um círculo ao redor */
+.copy-link i {
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.0);
+    /* ajuste se quiser mais destaque */
+}
+
+/* Responsivo: empilha em telas pequenas */
+@media (max-width: 720px) {
+    .copy-inner {
+        padding: 12px;
+    }
+
+    .copy-left img {
+        height: 36px;
+        margin-left: 8px;
+    }
+
+    .copy-right {
+        gap: 12px;
+        margin-right: 8px;
+    }
+
+    /* no mobile, deixa o texto central "clicável" por layout — mas mantemos central */
+    .copy-center {
+        font-size: 13px;
+    }
+}

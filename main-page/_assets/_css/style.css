@@ -298,13 +298,13 @@
 
 .accessibility-options {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     /* Reduzindo o 'gap' principal */
     align-items: center;
 }
 
 .accessibility-options span {
-    font-weight: 600;
+    font-weight: 500;
     /* Deixa o texto "Contraste", "Texto" um pouco mais forte */
     margin-right: 2px;
 }
@@ -326,7 +326,7 @@
 .accessibility-options .text-icon {
     font-family: var(--font-heading);
     /* Fonte Outfit */
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1rem;
 }
 
@@ -375,5 +375,5 @@
 }
 
 .image-container img{
-    transform: translate(100px, -100px);
+    transform: translate(100px, -130px);
 }
