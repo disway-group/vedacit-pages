@@ -6,8 +6,8 @@ function updateProfImage() {
     // Caminho base das imagens
     const basePath = "./_assets/_images/";
 
-    // Define a imagem padrão (Lojista)
-    let fileName = "logista.png";
+    // Define a imagem padrão
+    let fileName = "default.png";
 
     if (value.includes("pedreiro") || value.includes("mestre")) {
         fileName = "mestre-de-obras.png";
