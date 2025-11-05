@@ -172,7 +172,7 @@ h6 {
     justify-content: flex-end;
     padding: 0 40px;
     gap: 30px;
-    background-image: url('../_images/concrete-wall-light.webp');
+    background-image: url('../images/concrete-wall-light.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -231,7 +231,7 @@ h6 {
 
 /* inner com largura controlada e posição relativa para o centro absoluto */
 .copy-inner {
-    max-width: 1200px;
+    max-width: 1900px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -255,6 +255,7 @@ h6 {
     display: block;
     margin-left: 20px;
     /* afasta do canto como na imagem */
+    margin-bottom: 40px;
 }
 
 /* copyright sempre centralizado visualmente */
@@ -299,17 +300,21 @@ h6 {
 
 /* Melhor controlar a aparência do ícone desenhando um círculo ao redor */
 .copy-link i {
-    font-size: 12px;
+    font-size: 22px;
     width: 22px;
     height: 22px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.9);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.0);
     /* ajuste se quiser mais destaque */
+}
+
+.copy-left span {
+    margin: 20px;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 /* Responsivo: empilha em telas pequenas */

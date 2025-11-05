@@ -4,7 +4,7 @@ function updateProfImage() {
     const value = select.value.toLowerCase();
 
     // Caminho base das imagens
-    const basePath = "./_assets/_images/";
+    const basePath = "./assets/images/";
 
     // Define a imagem padrão
     let fileName = "default.png";

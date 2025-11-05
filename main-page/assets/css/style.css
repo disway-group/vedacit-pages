@@ -1,7 +1,7 @@
 /* --- SEÇÃO HERO --- */
 .hero-section {
     padding: 80px 0;
-    background-image: url('../_images/fundovedacit.png');
+    background-image: url('../images/fundovedacit.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -152,9 +152,8 @@
 
 /* Botão de Envio */
 .btn-submit {
-    font-family: var(--font-heading);
     background-color: var(--primary-color);
-    color: var(--dark-color);
+    color: #1e1e1e !important;
     width: 100%;
     padding: 14px;
     border: none;
@@ -163,6 +162,11 @@
     font-weight: 700;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.1s linear !important;
+}
+
+.btn-submit:hover{
+    background-color: #da9e14;
 }
 
 /* --- FOOTER --- */
@@ -171,7 +175,7 @@
     padding: 40px 0 20px 0;
     color: var(--dark-color);
     font-family: var(--font-body);
-    background-image: url('../_images/pedra.jpg');
+    background-image: url('../images/concrete-wall.webp');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
