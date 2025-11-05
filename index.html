@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.css">
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" sizes="250x250"/>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" sizes="250x250" />
 </head>
 
 <body>
@@ -36,6 +36,12 @@
                     <span class="divider"></span> <span>Libras</span>
                     <a href="#" aria-label="Ativar Libras"><i class="fa-solid fa-hands-asl-interpreting"></i></a>
                 </div>
+
+                <div class="mobile-accessibility-menu">
+                    <span>Menu de acessibilidade</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
             </div>
         </div>
 
@@ -74,10 +80,27 @@
             </div>
 
         </header>
-        <div class="progress-bar"></div>
+
+        <!-- MENU MOBILE -->
+        <div class="mobile-header">
+            <label for="menu-toggle" class="mobile-nav-toggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="mobile-logo">
+                <a href="/">
+                    <img src="./assets/images/logo-vedacit-b2c.svg" alt="Logo da Vedacit">
+                </a>
+            </div>
+
+            <div class="mobile-search">
+                <a href="#" aria-label="Buscar">
+                    <img src="./assets/images/search.svg" alt="search" class="search-icon">
+                </a>
+            </div>
+        </div>
 
     </div>
-
     <main class="hero-section">
         <div class="container hero-container">
 
@@ -117,7 +140,8 @@
 
                     <div class="form-group">
                         <label for="last_name" class="form-label">Nome</label>
-                        <input id="last_name" name="last_name" type="text" maxlength="80" size="20" class="form-input" required>
+                        <input id="last_name" name="last_name" type="text" maxlength="80" size="20" class="form-input"
+                            required>
                     </div>
 
                     <!-- Campo: Profissão -->
@@ -212,7 +236,8 @@
                     <!-- Campo: Email -->
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input id="email" name="email" type="email" maxlength="80" size="20" class="form-input" required>
+                        <input id="email" name="email" type="email" maxlength="80" size="20" class="form-input"
+                            required>
                     </div>
 
                     <!-- Checkboxes -->

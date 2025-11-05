@@ -5,7 +5,6 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-top: 126px;
 }
 
 .hero-container {
@@ -156,7 +155,7 @@
     transition: background-color 0.1s linear !important;
 }
 
-.btn-submit:hover{
+.btn-submit:hover {
     background-color: #da9e14;
 }
 
@@ -168,7 +167,7 @@
     font-family: var(--font-body);
     background-image: url('../images/concrete-wall.webp');
     background-size: cover;
-    background-position: left center;
+    background-position: center center;
     background-repeat: no-repeat;
     font-weight: 500;
 }
@@ -363,12 +362,24 @@
     margin-top: 80px;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.image-container img{
-    transform: translate(100px, -130px);
+@media only screen and (min-width: 760px) {
+
+    .image-container img {
+        transform: translate(100px, -130px);
+    }
+
+    .hero-section {
+        margin-top: 124px;
+    }
+
+    .mobile-accessibility-menu{
+        display: none;
+    }
+
 }

@@ -322,25 +322,3 @@ h6 {
     font-weight: 500;
     font-size: 13px;
 }
-
-/* Responsivo: empilha em telas pequenas */
-@media (max-width: 720px) {
-    .copy-inner {
-        padding: 12px;
-    }
-
-    .copy-left img {
-        height: 36px;
-        margin-left: 8px;
-    }
-
-    .copy-right {
-        gap: 12px;
-        margin-right: 8px;
-    }
-
-    /* no mobile, deixa o texto central "clicável" por layout — mas mantemos central */
-    .copy-center {
-        font-size: 13px;
-    }
-}
