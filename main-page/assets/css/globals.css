@@ -194,7 +194,7 @@ h6 {
 .nav-links a {
     font-family: var(--font-body);
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--dark-color);
     transition: color 0.3s ease;
 }
@@ -211,6 +211,12 @@ h6 {
     font-weight: 700;
     font-size: 0.9rem;
     flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.search-icon{
+    width: 32px;
+    height: 32px;
 }
 
 .header-search {
