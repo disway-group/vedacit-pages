@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const telFinanceiro = document.getElementById("00N01000000egLQ");
     const dddGeral = document.getElementById("00N1U00000UlFrR");
     const dddCelular = document.getElementById("00N1U00000UlFrQ");
+    const email = document.getElementById("email")
 
     const form = document.querySelector(".web-to-lead-form");
 
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     phoneInput.addEventListener("input", handlePhone);
 
     // Validação e preenchimento dos campos antes do envio
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
         const rawValue = phoneInput.value.replace(/\D/g, ""); // somente números
         const ddd = rawValue.substring(0, 2);
         const numero = rawValue.substring(2);
@@ -41,14 +42,24 @@ document.addEventListener("DOMContentLoaded", function () {
         // Validação básica
         if (ddd.length !== 2) {
             e.preventDefault();
-            alert("O DDD deve conter exatamente 2 dígitos.");
+            await Swal.fire({
+                icon: 'warning',
+                title: 'DDD inválido',
+                text: 'O DDD deve conter exatamente 2 dígitos.',
+                confirmButtonColor: '#f5a623'
+            });
             phoneInput.focus();
             return false;
         }
 
         if (numero.length < 8 || numero.length > 9) {
             e.preventDefault();
-            alert("O número de telefone deve ter entre 8 e 9 dígitos após o DDD.");
+            await Swal.fire({
+                icon: 'error',
+                title: 'Número inválido',
+                text: 'O número de telefone deve ter entre 8 e 9 dígitos após o DDD.',
+                confirmButtonColor: '#f5a623'
+            });
             phoneInput.focus();
             return false;
         }
@@ -57,13 +68,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const phoneRegex = /^\d{10,11}$/;
         if (!phoneRegex.test(rawValue)) {
             e.preventDefault();
-            alert("Por favor, insira um telefone válido no formato (11) 91234-5678.");
+            await Swal.fire({
+                icon: 'error',
+                title: 'Formato incorreto',
+                text: 'Por favor, insira um telefone válido no formato (11) 91234-5678.',
+                confirmButtonColor: '#f5a623'
+            });
             phoneInput.focus();
             return false;
         }
 
         // Remove a máscara antes do envio
         phoneInput.value = rawValue;
+
+        await Swal.fire({
+            icon: 'success',
+            title: 'Tudo certo!',
+            text: 'Seu telefone foi validado com sucesso.',
+            confirmButtonColor: '#28a745',
+            timer: 1500,
+            showConfirmButton: false
+        });
 
         return true;
     });
