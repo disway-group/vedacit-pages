@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
         await Swal.fire({
             icon: 'success',
             title: 'Tudo certo!',
-            text: 'Seu telefone foi validado com sucesso.',
+            text: 'Seus dados foram validados!',
             confirmButtonColor: '#28a745',
-            timer: 1500,
+            timer: 2000,
             showConfirmButton: false
         });
 
