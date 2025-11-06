@@ -335,3 +335,9 @@ h6 {
   font-weight: 500;
   font-size: 13px;
 }
+
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none !important;
+  }
+}

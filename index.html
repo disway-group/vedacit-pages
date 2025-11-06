@@ -17,6 +17,9 @@
 
 <body>
 
+    <input type="checkbox" id="menu-toggle" class="mobile-menu-checkbox">
+
+
     <div class="sticky-header-wrapper">
 
         <div class="top-bar">
@@ -55,11 +58,11 @@
 
             <div class="nav-wrapper">
 
-                <input type="checkbox" id="menu-toggle" class="mobile-menu-checkbox">
 
                 <label for="menu-toggle" class="mobile-nav-toggle" aria-label="Abrir menu">
                     <i class="fa-solid fa-bars icon-open"></i> <i class="fa-solid fa-times icon-close"></i> </label>
                 <nav class="main-nav">
+                   
                     <ul class="nav-links">
                         <li><a href="#">Produtos e Soluções</a></li>
                         <li><a href="#">Lojistas</a></li>
@@ -99,6 +102,51 @@
                 </a>
             </div>
         </div>
+
+        <nav class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="./assets/images/logo-vedacit-b2c.svg" alt="Logo da Vedacit">
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#">Produtos e Soluções</a></li>
+                <li><a href="#">Lojistas</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Institucional</a></li>
+                <li><a href="#">Sistema B</a></li>
+                <li><a href="#">Vedacit Pro</a></li>
+                <li><a href="#">Onde Encontrar</a></li>
+            </ul>
+
+            <div class="mobile-menu-contact">
+                <h3>Fale Conosco</h3>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>SAC 0800 833 2248</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Atendimento por E-mail</span>
+                </div>
+            </div>
+
+            <div class="mobile-menu-logos">
+                <img src="./assets/images/logo-vedacit-b2b.svg" alt="Vedacit Pro">
+                <img src="./assets/images/logo-instituto-vedacit.svg" alt="Instituto Vedacit">
+                <img src="./assets/images/logo-vedacit-esportes.svg" alt="Vedacit Esportes">   
+            </div>
+
+
+            <div class="mobile-menu-social">
+                <h3>Nossas Redes Sociais</h3>
+                <div class="mobile-menu-social social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </nav>
 
     </div>
     <main class="hero-section">
@@ -347,6 +395,7 @@
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/regex.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.5/sweetalert2.min.js"></script>
 
 </body>
