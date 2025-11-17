@@ -52,15 +52,6 @@
   font-weight: 700;
   font-size: 1rem;
   display: inline-block;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
-    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
-  transition: all 0.3s ease;
-}
-
-.btn-cta-main:hover {
-  transform: translateY(-2px);
 }
 
 /* --- Formulário da Direita --- */
@@ -70,10 +61,7 @@
   background: var(--light-color);
   padding: 35px;
   border-radius: 20px;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
-    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero-form-wrapper h2 {
@@ -94,7 +82,7 @@
   margin-bottom: 5px;
 }
 
-.form-group input:not(input[type="checkbox"]):not(input[type="submit"]),
+.form-group input:not(input[type="checkbox"]),
 .form-group select {
   width: 100%;
   padding: 12px;
@@ -104,7 +92,6 @@
   transition: border-color 0.3s ease;
 }
 
-/* Opcional: Adicionar um efeito de foco/hover para melhorar a UX */
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
@@ -151,35 +138,21 @@
 
 /* Botão de Envio */
 .btn-submit {
-  font-family: "Inter", sans-serif;
   background-color: var(--primary-color);
-  color: #000 !important;
+  color: #1e1e1e !important;
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
-    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-    inset 0px 1px 0px rgba(255, 255, 255, 0.03) !important;
-  transition: all 0.3s ease !important;
+  margin-top: 10px;
+  transition: background-color 0.1s linear !important;
 }
 
 .btn-submit:hover {
-  background-color: #faaa0d;
-  color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
-    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-    inset 0px 1px 0px rgba(255, 255, 255, 0.03) !important;
+  background-color: #da9e14;
 }
 
 /* --- FOOTER --- */
@@ -391,15 +364,149 @@
   align-items: center;
 }
 
-@media only screen and (min-width: 760px) {
-  
-  .image-container img {
-    transform: translate(100px, -130px);
-  }
+#profImage {
+  max-width: 100%;
+  height: auto;
+}
 
-    .hero-section {
-        margin-top: 124px;
-    }
+/* ===========================================
+   ESTILOS DINÂMICOS POR CAMPANHA
+   Apenas subtitle e CTA mudam de cor
+   =========================================== */
+
+/* Black Friday  */
+body[data-campanha="black_friday"] .hero-content .subtitle {
+  color: #ffd700;
+  background: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+body[data-campanha="black_friday"] .btn-cta-main {
+  background: linear-gradient(135deg, #1a1a1a, #000000);
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+body[data-campanha="black_friday"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Churn PIX  */
+body[data-campanha="churn_pix"] .hero-content .subtitle {
+  color: #00b894;
+  font-weight: 800;
+}
+
+body[data-campanha="churn_pix"] .btn-cta-main {
+  background: linear-gradient(135deg, #00b894, #32bcad);
+  color: #ffffff;
+  border: none;
+
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+body[data-campanha="churn_pix"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #32bcad, #00b894);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);s
+}
+
+/* Campanha Profissionais  */
+body[data-campanha="campanha_profissionais"] .hero-content .subtitle {
+  color: #702e16ff;
+  border-left: 4px solid #702e16ff;
+  padding-left: 10px;
+}
+
+body[data-campanha="campanha_profissionais"] .btn-cta-main {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+body[data-campanha="campanha_profissionais"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Lançamento Produto  */
+body[data-campanha="lançamento_produto"] .hero-content .subtitle {
+  color: #0984e3;
+  background: rgba(9, 132, 227, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+body[data-campanha="lançamento_produto"] .btn-cta-main {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(9, 132, 227, 0.4);
+}
+
+body[data-campanha="lançamento_produto"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  box-shadow: 0 6px 20px rgba(9, 132, 227, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Premiação Vedacit */
+body[data-campanha="premiacao_vedacit"] .hero-content .subtitle {
+  color: #d4af37;
+  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 800;
+}
+
+body[data-campanha="premiacao_vedacit"] .btn-cta-main {
+  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+  color: #1a1a1a;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+}
+
+body[data-campanha="premiacao_vedacit"] .btn-cta-main:hover {
+  background: linear-gradient(135deg, #f4e5a1, #d4af37);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Default  */
+
+@media only screen and (min-width: 760px) {
+  /* .image-container img {
+        transform: translate(100px, -130px);
+    } */
+
   .hero-section {
     margin-top: 124px;
   }
