@@ -370,9 +370,9 @@
 
 @media only screen and (min-width: 760px) {
 
-    .image-container img {
+    /* .image-container img {
         transform: translate(100px, -130px);
-    }
+    } */
 
     .hero-section {
         margin-top: 124px;
