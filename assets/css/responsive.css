@@ -1,216 +1,362 @@
 /* --- MEDIA QUERIES PARA RESPONSIVIDADE (PURE CSS) --- */
 
 @media (max-width: 768px) {
+  .sticky-header-wrapper {
+    box-shadow: none;
+  }
 
+  .top-bar .container {
+    gap: 10px;
+  }
 
-    .sticky-header-wrapper {
-        box-shadow: none;
-    }
+  .accessibility-options {
+    display: none;
+  }
 
-    .top-bar .container {
-        gap: 10px;
-    }
+  .logo-wrapper {
+    justify-content: center;
+    padding: 15px;
+  }
 
-    .accessibility-options {
-        display: none;
-    }
+  .site-header {
+    flex-direction: row-reverse;
+  }
 
-    .logo-wrapper {
-        justify-content: center;
-        padding: 15px;
-    }
+  .nav-wrapper {
+    padding: 10px 20px;
+    justify-content: space-between;
+    background: transparent;
+  }
 
-    .site-header {
-        flex-direction: row-reverse;
-    }
+  /* Esconde os itens de navegação do desktop */
+  .nav-wrapper .btn-header {
+    display: none;
+  }
 
-    .nav-wrapper {
-        padding: 10px 20px;
-        justify-content: space-between;
-        background: transparent;
-    }
+  .mobile-nav-toggle {
+    display: block;
+  }
 
-    /* Esconde os itens de navegação do desktop */
-    .nav-wrapper .btn-header {
-        display: none;
-    }
+  .site-header .nav-wrapper .main-nav,
+  .main-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    border-right: 5px solid red !important;
+    padding: 80px 20px 20px 20px !important;
+    z-index: 2000 !important;
+    overflow-y: auto !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3) !important;
+    transition: left 0.3s ease !important;
+    margin-right: 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
 
-    /* Mostra o botão (label) hamburger */
-    .mobile-nav-toggle {
-        display: block;
-        /* Mostra a label no mobile */
-    }
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .site-header .main-nav,
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .main-nav {
+    left: 0 !important;
+  }
 
-    /* --- Estilo do Menu Mobile (Escondido por padrão) --- */
-    .main-nav {
-        display: none;
-        /* Menu escondido por padrão */
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: var(--light-color);
-        padding: 60px 20px 20px 20px;
-        z-index: 1000;
-        min-height: 100vh;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .site-header .main-nav,
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .main-nav {
+    left: 0 !important;
+  }
 
-    .main-nav .nav-links {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        width: 100%;
-    }
+  .main-nav .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-    .main-nav .nav-links a {
-        font-size: 1.2rem;
-    }
+  .main-nav .nav-links li {
+    width: 100%;
+  }
 
+  .main-nav .nav-links a {
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+  }
 
-    /* --- A MÁGICA DO PURE CSS --- */
+  .main-nav .nav-links a:hover {
+    background: #f5f5f5;
+  }
 
-    /* 1. Quando o checkbox é marcado, MOSTRA o menu */
-    .mobile-menu-checkbox:checked~.main-nav {
-        display: flex;
-    }
+  .main-nav .btn-header {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
 
-    /* 2. Quando o checkbox é marcado, ajusta o botão (label) */
-    .mobile-menu-checkbox:checked~.mobile-nav-toggle {
-        position: fixed;
-        /* Fixo para ficar visível sobre o menu */
-        top: 20px;
-        right: 20px;
-        color: var(--dark-color);
-        /* Garante que o X seja escuro no fundo branco */
-    }
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .site-header .main-nav,
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper .main-nav {
+    left: 0 !important;
+  }
 
-    /* 3. Troca o ícone ☰ por X */
-    .mobile-menu-checkbox:checked~.mobile-nav-toggle .icon-open {
-        display: none;
-        /* Esconde hamburger */
-    }
+  .mobile-menu-checkbox:checked ~ .sticky-header-wrapper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
+  }
 
-    .mobile-menu-checkbox:checked~.mobile-nav-toggle .icon-close {
-        display: block;
-        /* Mostra "X" */
-    }
+  /* --- AJUSTES DO HERO SECTION --- */
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
 
+  .hero-content,
+  .hero-form-wrapper {
+    max-width: 100%;
+  }
 
-    /* --- AJUSTES DO HERO SECTION --- */
-    .hero-container {
-        flex-direction: column;
-        gap: 30px;
-    }
+  .hero-content {
+    text-align: center;
+  }
 
-    .hero-content,
-    .hero-form-wrapper {
-        max-width: 100%;
-    }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
 
-    .hero-content {
-        text-align: center;
-    }
+  .hero-form-wrapper {
+    padding: 20px;
+  }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
+  .form-group-inline {
+    flex-direction: column;
+    gap: 0;
+  }
 
-    .hero-form-wrapper {
-        padding: 20px;
-    }
+  /* --- AJUSTES DO FOOTER --- */
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-    .form-group-inline {
-        flex-direction: column;
-        gap: 0;
-    }
+  .footer-column h3::after {
+    display: none;
+  }
 
-    /* --- AJUSTES DO FOOTER --- */
-    .footer-content {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .footer-column h3::after {
-        display: none;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    display: none !important;
+  }
 
-    /* Esconde o header desktop */
-    .site-header {
-        display: none;
-    }
+  .site-header .main-nav {
+    display: flex !important;
+  }
 
-    /* Mostra o menu mobile */
-    .mobile-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #fff;
-        padding: 10px 15px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
+  .mobile-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 2500;
+  }
 
-    .mobile-header .mobile-logo img {
-        height: 35px;
-        width: 120px;
-    }
+  .mobile-header .mobile-logo img {
+    height: 35px;
+    width: 120px;
+  }
 
-    .mobile-header i {
-        font-size: 22px;
-        color: #000;
-        cursor: pointer;
-    }
+  .mobile-header i {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+  }
 
-    .mobile-header .mobile-nav-toggle,
-    .mobile-header .mobile-search {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 35px;
-        height: 35px;
-    }
+  .mobile-header .mobile-nav-toggle,
+  .mobile-header .mobile-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
 
-    .mobile-header a {
-        color: inherit;
-        text-decoration: none;
-    }
+  .mobile-header a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .mobile-nav-links li {
+    width: 100%;
+  }
+
+  .mobile-nav-links a {
+    display: flex;
+    padding: 8px 4px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+  }
+
+  .mobile-nav-links a:hover {
+    background-color: #0707071f;
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    background-color: var(--light-color);
+    padding: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+    margin: -20px -20px 0 -20px;
+    width: calc(100% + 40px);
+  }
+
+  .mobile-menu-header img {
+    width: 150px;
+    height: auto;
+  }
+
+  .mobile-menu-contact {
+    margin-top: 1rem;
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  .mobile-menu-contact h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    color: #000;
+  }
+
+  .contact-item i {
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu-logos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #000;
+  }
+
+  .mobile-menu-logos img {
+    max-width: 120px;
+    height: auto;
+    padding: 5px;
+    filter: brightness(0);
+  }
+
+  .mobile-menu-social {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    color: #000;
+  }
+
+  .mobile-menu-social h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .mobile-menu-social .social-icons {
+    display: flex;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .mobile-menu-social .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-menu-social .social-icons a:hover {
+    transform: scale(1.1);
+    background: #333;
+  }
 }
 
 /* Responsivo: empilha em telas pequenas */
 @media (max-width: 720px) {
-    .copy-inner {
-        padding: 12px;
-    }
+  .copy-inner {
+    padding: 12px;
+  }
 
-    .copy-left img {
-        height: 36px;
-        margin-left: 8px;
-    }
+  .copy-left img {
+    height: 36px;
+    margin-left: 8px;
+  }
 
-    .copy-right {
-        gap: 12px;
-        margin-right: 8px;
-    }
+  .copy-right {
+    gap: 12px;
+    margin-right: 8px;
+  }
 
-    /* no mobile, deixa o texto central "clicável" por layout — mas mantemos central */
-    .copy-center {
-        font-size: 13px;
-    }
+  /* no mobile, deixa o texto central "clicável" por layout — mas mantemos central */
+  .copy-center {
+    font-size: 13px;
+  }
 
-    .hero-section {
-        margin-top: 90px;
-    }
+  .hero-section {
+    margin-top: 90px;
+  }
 }
